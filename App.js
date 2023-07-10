@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import * as React from 'react';
-import 'react-native-gesture-handler';
+
 // importacion para poder usar el navegador tipo 'stack'
+import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -16,11 +17,22 @@ import showProduct from './screens/showProduct';
 
 
 export default function App() {
+
+  const Stack = createStackNavigator ();
+  function MyStack (){
+    return (
+      <Stack.Navigator>
+      <Stack.Screen name="List" component={listProduct}/>
+      <Stack.Screen name="Create" component={createProduct}/>
+      <Stack.Screen name="Show" component={showProduct}/>
+    </Stack.Navigator>
+    ) 
+    
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+   <NavigationContainer>
+    <MyStack></MyStack>
+   </NavigationContainer>
   );
 }
 
