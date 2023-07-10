@@ -13,6 +13,9 @@ export const Styles = StyleSheet.create({
         flex: 1,
         padding: 35,
       },
+      boder : {
+        borderRadius: 10,
+      },
       titulo:{
         textAlign: "center",
         fontSize: 18,
