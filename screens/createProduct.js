@@ -1,56 +1,44 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, ScrollView, Button } from 'react-native';
-import * as React from 'react';
 import { useState } from 'react';
 import { Styles } from '../estilos/styles';
 
 
 export default function createProduct() {
 
-  
-    const initialState = {
-     nombre: '',
-    tipo_de_producto: String ,
-    color_de_producto: String ,
-    stock: Number ,
-  };
-
-  const [state, setState] = useState(initialState);
- 
-  const handleChangeText = (value, name)=> {
-    setState[{...state, [name]:value}]
-  };
-
-  const saveProduct = ()=> {
-    console.log(state);
+  const initialState = {
+    nombre:'',
+    Tipo_de_producto:'',
+    Color_de_producto:'',
+    stock:'',
   }
+  const [state, setState] = useState(initialState)
+
+  const handleChangeText = (value, name)=> {
+    setState({...state,[name]:value})
+
+  }
+  const saveProduct= ()=> {
+    console.log(state)
+  }
+
 
   return (
     <ScrollView style={Styles.conteiner2}>
       <Text style={Styles.titulo}>Crear Producto</Text>
-
       <View style={Styles.inputGroup}>
-        <TextInput placeholder='Nombre' onChangeText={(value)=>handleChangeText(value,'Nombre') } value={state.nombre}>
-          
-        </TextInput>
+        <TextInput placeholder='nombre' onChangeText={(value)=>handleChangeText(value,'nombre')} value={state.nombre} />
       </View>
-
       <View style={Styles.inputGroup}>
-        <TextInput placeholder='Tipo De Producto' onChangeText={(value)=>handleChangeText(value,'tipo_de_producto') } value={state.tipo_de_producto}>
-
-        </TextInput>
+        <TextInput placeholder='Tipo de producto' onChangeText={(value)=>handleChangeText(value,'Tipo_de_producto')} value={state.Tipo_de_producto}/>
       </View>
-
-      <View style={Styles.inputGroup} onChangeText={(value)=>handleChangeText(value,'color_de_producto') } value={state.color_de_producto}>
-        <TextInput placeholder='Color De Producto'></TextInput>
+      <View style={Styles.inputGroup}>
+        <TextInput placeholder='Color de producto'onChangeText={(value)=>handleChangeText(value,'Color_de_producto')} value={state.Color_de_producto}/>
       </View>
-
-      <View style={Styles.inputGroup} onChangeText={(value)=>handleChangeText(value,'stock') } value={state.stock}>
-        <TextInput placeholder='Stock'></TextInput>
+      <View style={Styles.inputGroup}>
+        <TextInput placeholder='stock' onChangeText={(value)=>handleChangeText(value,'stock')} value={state.stock}/>
       </View>
-      <View>
-        <Button title='Guardar Producto' onPress={saveProduct}></Button>
-      </View>
+      <Button title='Guardar Datos' onPress={saveProduct} />
     </ScrollView>
   );
 }
