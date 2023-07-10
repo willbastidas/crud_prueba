@@ -8,5 +8,10 @@ export const  colores ={
     black: '#000000',
     white: '#FFFFFF',
     results: '#46D5B2',
-    c: '#cccccc',
+    gris: '#cccccc', //gris
+    orange: '#D68910', //naranja clarito
+    green_watercolor: '#2ECC71', //verde acuarela
+    sky_blue: '#3498DB', //celeste
+    purple: '#7D3C98' //morado
+
 }

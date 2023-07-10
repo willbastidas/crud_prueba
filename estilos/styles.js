@@ -9,8 +9,18 @@ export const Styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
       },
+      conteiner2: {
+        flex: 1,
+        padding: 35,
+      },
+      titulo:{
+        textAlign: "center",
+        fontSize: 18,
+        marginTop: 12,
+        marginBottom: 20,
+      },
       boton:{
-        backgroundColor: '#4E505F',
+        backgroundColor: colores.sky_blue,
         height: 35,
         borderColor: colores.dark,
         borderRadius: 10,
@@ -24,6 +34,7 @@ export const Styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 20,
         marginBottom: 20,
+        fontSize: 20,
       },
       textoNombre: {
         fontSize:16,
@@ -34,6 +45,14 @@ export const Styles = StyleSheet.create({
         borderButtomColor: colores.c,
         marginBottom: 3,
         padding: 5,
+      },
+      inputGroup: {
+        flex: 1,
+        padding: 0,
+        marginBottom: 20,
+        borderBottomWidth: 1,
+        borderBottomColor: colores.gray,
 
       },
+
 });
