@@ -18,11 +18,10 @@ export default function showProduct(props) {
 
   const getOneProduct = async(id)=>  {
     try {
-      const docRef = doc(db, 'product', id);
+      const docRef = doc(db, 'productos', id);
       const docSnap = await getDoc(docRef);
       setProduct(docSnap.data())
-    } catch{ console.error(error)
-      
+    } catch (error){ console.error(error)
     }
   }
 
@@ -36,9 +35,9 @@ export default function showProduct(props) {
 
 
       <Text>nombre:{product.nombre} </Text>
-      <Text>nombre:{product.Tipo_de_producto} </Text>
-      <Text>nombre:{product.Color_de_producto} </Text>
-      <Text>nombre:{product.stock} </Text>
+      <Text>tipo de producto:{product.Tipo_de_producto} </Text>
+      <Text>color de producto:{product.Color_de_producto} </Text>
+      <Text>stock del preoducto:{product.stock} </Text>
     </View>
   );
 }
