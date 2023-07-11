@@ -1,10 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, ScrollView, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, Button, Alert} from 'react-native';
 import { useState } from 'react';
 import { Styles } from '../estilos/styles';
 
+//importaciones de fira base
+import appFirebase from '../credenciales';
+import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, setDoc} from 'firebase/firestore';
 
-export default function createProduct() {
+const db = getFirestore(appFirebase);
+
+export default function createProduct(props) {
 
   const initialState = {
     nombre:'',
@@ -18,8 +23,17 @@ export default function createProduct() {
     setState({...state,[name]:value})
 
   }
-  const saveProduct= ()=> {
-    console.log(state)
+  const saveProduct= async()=> {
+    try {
+      await addDoc(collection(db, 'productos'),{...state});
+      Alert.alert('aviso', 'productos guardados');
+      props.navigation.navigate('List');
+    }
+    catch {
+      console.error(error)
+    }
+    
+    //console.log(state)
   }
 
 

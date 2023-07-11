@@ -28,6 +28,18 @@ export const Styles = StyleSheet.create({
         borderColor: colores.dark,
         borderRadius: 10,
         borderWidth: 1,
+        textAlign: 'center',
+        marginBottom: 5,
+      },
+      BotonLista:{
+        backgroundColor:colores.orange,
+        borderBottomWidth:1,
+        borderBottomColor:'#cccccc',
+        borderRadius: 10,
+        marginBottom:3,
+        marginTop: 3,
+        padding:9.5,
+        textAlign: "center",
       },
       textoBoton:{
         fontSize: 18,
@@ -41,7 +53,11 @@ export const Styles = StyleSheet.create({
       },
       textoNombre: {
         fontSize:16,
+        textAlign: 'justify',
       },
+      // textoColor:{
+      //   textShadowColor: colores.white,
+      // },
       botonLista:{
         backgroundColor: colores.black,
         borderButtomWidth: 1,
