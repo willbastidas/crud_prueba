@@ -53,7 +53,8 @@ export default function listProduct(props) {
         <View>
           {
             lista.map((list)=>
-            <TouchableOpacity key={list.id} style={Styles.BotonLista}>
+            <TouchableOpacity key={list.id} style={Styles.BotonLista}
+            onPress={()=>props.navigation.navigate('Show', {productID:list.id})}>
               <Text style={Styles.textoNombre}>{list.nombre}</Text>
             </TouchableOpacity>
             )
