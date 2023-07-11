@@ -54,13 +54,12 @@ export default function listProduct(props) {
           {
             lista.map((list)=>
             <TouchableOpacity key={list.id} style={Styles.BotonLista}>
-              <Text style={Styles.textoNombre}>informacion sobre: {list.nombre}</Text>
+              <Text style={Styles.textoNombre}>{list.nombre}</Text>
             </TouchableOpacity>
             )
           }
         </View>
         {/*onPress={()=>props.navigation.navigate('Create')} ==> Se utiliza para al presionar mandarte a la otra pantalla en este caso create*/}
-        
     </ScrollView>
   );
 }

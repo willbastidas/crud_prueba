@@ -39,7 +39,6 @@ export const Styles = StyleSheet.create({
         marginBottom:3,
         marginTop: 3,
         padding:9.5,
-        textAlign: "center",
       },
       textoBoton:{
         fontSize: 18,
@@ -73,5 +72,4 @@ export const Styles = StyleSheet.create({
         borderBottomColor: colores.gray,
 
       },
-
 });
