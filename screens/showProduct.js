@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import * as React from 'react';
 import { Styles } from '../estilos/styles';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -30,14 +30,14 @@ export default function showProduct(props) {
   },[])
 
   return (
-    <View>
+    <ScrollView style={Styles.conteiner2}>
       <Text style={Styles.textoTitulo}>Detalles Del Producto</Text>
 
 
-      <Text>nombre:{product.nombre} </Text>
-      <Text>tipo de producto:{product.Tipo_de_producto} </Text>
-      <Text>color de producto:{product.Color_de_producto} </Text>
-      <Text>stock del preoducto:{product.stock} </Text>
-    </View>
+      <Text style={Styles.sub}>Nombre: {product.nombre} </Text>
+      <Text style={Styles.sub}>Tipo De Producto: {product.Tipo_de_producto} </Text>
+      <Text style={Styles.sub}>Color De Producto: {product.Color_de_producto} </Text>
+      <Text style={Styles.sub}>Stock Del Preducto: {product.stock} </Text>
+    </ScrollView>
   );
 }

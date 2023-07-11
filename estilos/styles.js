@@ -70,6 +70,13 @@ export const Styles = StyleSheet.create({
         marginBottom: 20,
         borderBottomWidth: 1,
         borderBottomColor: colores.gray,
-
+      },
+      sub: {
+        flex: 1,
+        padding: 0,
+        marginBottom: 20,
+        borderBottomWidth: 1,
+        borderBottomColor: colores.black,
+        fontSize: 16,
       },
 });
